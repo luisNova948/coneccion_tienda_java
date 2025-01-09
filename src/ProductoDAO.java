@@ -48,6 +48,29 @@ public class ProductoDAO {
         }
     }
 
+   public List<Producto> getProductos() {
+       String sql = "SELECT * FROM productos";
+       List<Producto> lista = new ArrayList<>();
+       try (Connection con = ConexionBD.getConnection();
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql)) {
+
+           while (rs.next()) {
+               Producto producto = new Producto(
+                       rs.getString("nombre"),        // Nombre del producto
+                       rs.getString("descripcion"),  //
+                       rs.getDouble("precio"),       // Precio del producto
+                       rs.getInt("cantidad")         // Cantidad del producto
+               );
+               producto.setId(rs.getInt("id")); // Establecer el ID del producto
+               lista.add(producto);            // Agregar a la
+           }
+       } catch (SQLException e) {
+           System.out.println("Error al listar productos: " + e.getMessage());
+       }
+       return lista;
+   }
+
     public boolean eliminarProducto(int id) {
         String sql = "DELETE FROM productos WHERE id = ?";
         try (Connection con = ConexionBD.getConnection();

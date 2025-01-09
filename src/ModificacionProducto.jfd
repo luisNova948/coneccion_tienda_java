@@ -1,0 +1,61 @@
+JFDML JFormDesigner: "8.2.4.0.393" Java: "21.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :p:153:p, par l {comp jLabel1::l:p:37:p, comp jLabel2::l:p:73:p, comp jLabel3::l:p::p, comp jLabel4::l:p:90:p, comp jLabel5:::::x}, space u:::p, par l {comp txtCantidad:::p:71:p, comp txtPrecio:::p:71:p, comp txtDescripcion:::p:71:p, comp txtNombre:::p:71:p, comp txtId:::p:71:p}, space ::175:x}, seq l {space :p:200:p, comp btnModificar:::p::p, space :::x}}"
+			"$verticalGroup": "par l {seq {space :p:44:p, par l {seq {comp jLabel1:::::x, space :p::p, comp jLabel2:::::x, space s:p::p, comp jLabel3:::::x, space s:p::p, comp jLabel4:::::x, space s:::p, comp jLabel5:::::x, space :p:40:p}, seq l {comp txtId:::p::p, space :::p, comp txtNombre:::p::p, space :::p, comp txtDescripcion:::p::p, space u:::p, comp txtPrecio:::p::p, space s:::p, comp txtCantidad:::p::p, space :::x}}, comp btnModificar:::p::p, space :p:105:p}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "MODIFICAR PRODUCTOS"
+			"alwaysOnTop": true
+			"locationByPlatform": true
+			"name": "frmModificarProducto"
+			"resizable": false
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnModificar"
+				"text": "Actualizar"
+				"name": "btnModificar"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnModificarActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtId"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "txtIdActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtNombre"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtDescripcion"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtPrecio"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtCantidad"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel1"
+				"text": "ID"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel2"
+				"text": "NOMBRE"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel3"
+				"text": "DESCRIPCION"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel4"
+				"text": "PRECIO"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "jLabel5"
+				"text": "CANTIDAD"
+			} )
+		}, new FormLayoutConstraints( null ) )
+	}
+}
